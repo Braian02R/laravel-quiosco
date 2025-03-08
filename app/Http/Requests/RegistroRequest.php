@@ -34,4 +34,23 @@ class RegistroRequest extends FormRequest
             ]
         ];
     }
+
+    /**
+     * Get custom error messages for validation.
+     *
+     * @return array<string, string>
+     */
+    public function messages()
+    {
+        return [
+            'name' => 'El Nombre es obligatorio.',
+            'email.required' => 'El Email es obligatorio.',
+            'email.email' => 'El Email debe tener un formato válido.',
+            'email.unique' => 'Este Email ya está registrado.',
+            'password.confirmed' => 'La contraseña no coinciden.',
+            'password' => 'El password debe contener al menos 8 caracteres, un simbolo y un número',
+            
+
+        ];
+    }
 }
