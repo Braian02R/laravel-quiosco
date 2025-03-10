@@ -58,7 +58,7 @@ class AuthController extends Controller
     {
         //return "logout...";
         $user = $request->user();
-        $user->currentAccesstoken()->delete();
+        $user->currentAccessToken()->delete();
 
         return [
             'user' => null
